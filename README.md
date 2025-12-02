@@ -7,7 +7,7 @@
 </div> 
 
 <div align="center"> 
-  <img src="https://files.catbox.moe/n2uuqg.jpg"
+  <img src="https://files.catbox.moe/6yattf.jpg"
     alt="Fanty-GadgetsZW Logo" height="300"> 
 </div>
 
