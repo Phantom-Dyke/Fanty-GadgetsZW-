@@ -17,7 +17,7 @@
 Click below to fork Fanty-GadgetsZW to your GitHub account:
 
 <a href="https://github.com/Phantom-Dyke/Fanty-GadgetsZW-" target="_blank">
-  <img src="https://img.shields.io/badge/Fork%20Bot%20Repo-100000?style=for-the-badge&logo=github&logoColor=white" alt="Fork Repo"/>
+  <img src="https://img.shields.io/badge/Available%20Gadgets%20Pricelist-100000?style=for-the-badge&logo=github&logoColor=white" alt="Fork Repo"/>
 </a>
 
 ---
