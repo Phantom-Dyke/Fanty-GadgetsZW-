@@ -54,17 +54,6 @@ header {
   transform: scale(1.03);
 }
 
-
-footer {
-  width: 100vw;           /* full viewport width */
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 20px 10px;
-  box-sizing: border-box;
-  position: relative;     /* normal flow, not sticky */
-  left: 0;                /* align to left edge */
-
 .updates-button {
   text-align: center;
   margin: 20px;
@@ -151,5 +140,17 @@ header {
 .product-card p {
   font-weight: bold;
   color: #28a745;
+}
+
+footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  margin: 0; /* removes any default margin */
+  box-sizing: border-box;
+  position: relative;
+  clear: both;
 }
 
