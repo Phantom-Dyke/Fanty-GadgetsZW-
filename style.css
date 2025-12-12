@@ -27,6 +27,25 @@ header {
   cursor: pointer;
   border-radius: 5px;
 }
+border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modal-content button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 .button-group button:hover {
   background: #0056b3;
