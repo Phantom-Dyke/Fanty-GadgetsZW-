@@ -16,12 +16,11 @@
   <a href="updates.html">🔔 Check Updates</a>
   </div>
 - 
-
-     <section class="product-grid">
-    <div class="product-card">
-      <img src="images/iphone13.jpg" alt="iPhone X" />
-      <h3>iPhone X</h3>
-      <p>180</p>
+  <section class="product-grid">
+   <div class="product-card">
+     <img src="images/iphone13.jpg" alt="iPhone X" />
+     <h3>iPhone X</h3>
+     <p>180</p>
     </div>
  <section class="product-grid">
     <div class="product-card">
@@ -58,9 +57,7 @@
       <img src="images/iphone13.jpg" alt="iPhone 13" />
       <h3>iPhone 13</h3>
       <p>128GB - 370</p>
-    </div>     
-  
-  
+    </div>      
   <section class="product-grid">
     <div class="product-card">
       <img src="images/iphone13.jpg" alt="iPhone 13" />
@@ -123,13 +120,57 @@
       <p>180</p>
     </div> 
   <section id="product-list" class="product-grid"></section>
-
 <script src="script.js"></script>
 </body>
   <footer>
     <p>Visit us @ Century Mall M1-46 (FedEx Entrance) | Call: 0783497146</p>
     <p>© Fanty Gadgets Store</p>
   </footer>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".product-card img");
+
+    images.forEach(img => {
+      const link = document.createElement("a");
+      link.href = img.src;
+      link.target = "_blank";
+      img.parentNode.insertBefore(link, img);
+      link.appendChild(img);
+    });
+  });
+        </script>
+<script src="script.js"></script>
+
+<script>
+  const container = document.getElementById('product-list');
+
+products.forEach(product => {
+  const card = document.createElement('div');
+  card.className = 'product-card';
+
+  // Fallbacks for missing image or price
+  const imgSrc = product.image || 'https://via.placeholder.com/150';
+  const name = product.name || 'Unnamed Product';
+  const price = product.price ? `
+    
+{product.price}` : 'N/A';
+
+  card.innerHTML = `
+    <img src="imgSrc" alt="{name}" style="width:100px;height:auto;">
+    <h3>name</h3>
+    <p style="color:green;"><strong>{price}</strong></p>
+  `;
+
+  container.appendChild(card);
+});
+
+const products = [
+  { name: 'iPhone 13', price: 370, image: 'https://files.catbox.moe/kyl51f.jpg' },
+  { name: 'Samsung S22', price: 400, image: 'https://your-image-url.com/s22.jpg' },
+  // Add more products here...
+];
+</script>
 </body>
 </html>
 <script>
