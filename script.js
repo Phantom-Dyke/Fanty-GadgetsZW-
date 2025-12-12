@@ -1,51 +1,56 @@
-const container = document.getElementById('product-list');
-
-products.forEach(product => {
-  const card = document.createElement('div');
-  card.className = 'product-card';
-
-  // Fallbacks for missing image or price
-  const imgSrc = product.image || 'https://via.placeholder.com/150';
-  const name = product.name || 'Unnamed Product';
-  const price = product.price ? `
-    
-{product.price}` : 'N/A';
-
-  card.innerHTML = `
-    <img src="imgSrc" alt="{name}" style="width:100px;height:auto;">
-    <h3>name</h3>
-    <p style="color:green;"><strong>{price}</strong></p>
-  `;
-
-  container.appendChild(card);
-});
-
+[12:38, 12/12/2025] ChatGPT: // Sample product data
 const products = [
-  { name: 'iPhone 13', price: 370, image: 'https://files.catbox.moe/kyl51f.jpg' },
-  { name: 'Samsung S22', price: 400, image: 'https://your-image-url.com/s22.jpg' },
-  // Add more products here...
+  {
+    name: "iPhone 13 Pro Max",
+    price: 490,
+    category: "iphone",
+    image: "https://files.catbox.moe/example1.jpg"
+  },
+  {
+    name: "Samsung S22 Ultra",
+    price: 280,
+    category: "samsung",
+    image: "https://files.catbox.moe/example2.jpg"
+  },
+  {
+    name: "Techno Spark 10",
+    price: 150,
+    category: "techno",
+    image: "https://files.catbox.moe/example3.jpg"
+  }
+  // You can add more products here
 ];
 
+// Display products by category
+function filterProducts(category) {
+  const container = document.getElementById("product-list");
+  container.innerHTML = "";
 
-const products = [
-    { name: 'iPhone X', price: '180', image: 'images/iphone-x.jpg' ,
-     name: 'iPhone XR', price: '210', image: 'images/iphone-xr.jpg' },
-    { name: 'iPhone 11 64GB', price: '240', image: 'images/iphone11-64.jpg' ,
-     name: 'iPhone 11 128GB', price: '260', image: 'images/iphone11-128.jpg' },
-    { name: 'iPhone 11 Pro Max', price: '330', image: 'images/iphone11promax.jpg' ,
-     name: 'iPhone 12', price: '280', image: 'images/iphone12.jpg' },
-    { name: 'iPhone 12 Pro', price: '380', image: 'images/iphone12pro.jpg' ,
-     name: 'iPhone 12 Pro Max 128GB', price: '390', image: 'images/iphone12promax-128.jpg' },
-    { name: 'iPhone 12 Pro Max 256GB', price: '430', image: 'images/iphone12promax-256.jpg' ,
-     name: 'iPhone 13 128GB', price: '240', image: 'https://files.catbox.moe/kyl51f.jpg' },
-    { name: 'iPhone 13 256GB', price: '400', image: 'images/iphone13-256.jpg' ,
-  [ name: 'iPhone 13 Pro', price: '460', image: 'images/iphone13pro.jpg' },
-    { name: 'iPhone 13 Pro Max 128GB', price: '490', image: 'images/iphone13promax-128.jpg' ,
-     name: 'iPhone 13 Pro Max 256GB', price: '520', image: 'images/iphone13promax-256.jpg' },
-    { name: 'iPhone 14', price: '460', image: 'images/iphone14.jpg' ,
-     name: 'iPhone 14 Plus', price: '470', image: 'images/iphone14plus.jpg' },
-    { name: 'iPhone 14 Pro', price: '550', image: 'images/iphone14pro.jpg' ,
-     name: 'iPhone 14 Pro Max 128GB', price: '580', image: 'images/iphone14promax-128.jpg' },
-    { name: 'iPhone 14 Pro Max 256GB', price: '600', image: 'images/iphone14promax-256.jpg' ,
-     name: 'iPhone 15 Pro Max', price: '850', image: 'images/iphone15promax.jpg' }
-  ];
+  const filtered = products.filter(p => p.category === category);
+
+  filtered.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+      <img src="p.image" alt="{p.name}">
+      <h3>p.name</h3>
+      <p>${p.price}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// Show update messages
+function showUpdates() {
+  const container = document.getElementById("product-list");
+  container.innerHTML = `
+    <div class="updates">
+  <h2>Latest Store Updates</h2>
+      <ul>
+        <li>📦 Fresh stock arriving weekly.</li>
+        <li>💵 Price drops on selected models.</li>
+        <li>🛒 Visit Century Mall M1-46 or call Fanty on 0783497146.</li>
+      </ul>
+    </div>
+  `;
+}
